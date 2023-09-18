@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <div id="card"></div>
+    </div>
+    
+
+    <script>
+
+        var name;
+        let ball = "hh"
+        const sco = "asasa"
+
+        let allstudents = [
+            {
+                name: "Tolu",
+                age: 20,
+                color: "red"
+            },
+            {
+                name: "Bolu",
+                age: 20,
+                color: "red"
+            },
+            {
+                name: "Tope",
+                age: 20,
+                color: "white"
+            }
+        ]
+
+        //es5
+        // Array.map(function(){
+
+        // })
+
+        //es6
+        allstudents.map((info,index)=>{
+            card.innerHTML += `
+                <h2>My name is ${info.name}</h2>
+                <p>Am ${info.age} years old</p>
+                <p>My favorite color is${info.color}</p>
+                <button>${index+1}</button>
+            `
+        })
+
+        //old way
+        // function jeje(index){
+        //     console.log(index);
+        // }
+
+        //return statmant
+        const erekere = (bush) => {
+            return `I am a ${bush}`
+            var ed = 'jaja'
+            console.log(ed);
+        }
+
+        let jar = function jare(){
+            return 2+2
+        }
+
+        console.log(jar());
+
+        console.log(erekere('Femi'));
+
+        //array.map(()=>{}) //callback
+
+        setTimeout(()=>{
+            console.log(1);
+        },3000)
+
+        console.log(2);
+        console.log(3);
+        console.log(4);
+        console.log(5);
+
+        //API means Application Programming Interface.
+    </script>
+</body>
+</html>

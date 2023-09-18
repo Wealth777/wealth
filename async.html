@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="fetchInfo()">fetch</button>
+
+    <script>
+
+        let endPoint = 'https://jsonplaceholder.typicode.com/posts'
+
+                        //old way of written async
+        // async function fetch(){
+
+        // }
+
+        //new way
+
+        // const fetchInfo = async() => {
+        //     let response = await fetch(endPoint)
+        //     console.log(response);
+        //     let convertedResponse = await response.json()
+        //     console.log(convertedResponse);
+        //     convertedResponse.map((res)=>{
+        //         console.log(res.title);
+        //     })
+        // }
+
+        //another way (new)
+
+        const fetchInfo = () => {
+            fetch(endPoint)
+            .then(response=>response.json())
+            .then((result)=>{
+                console.log(result);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        }
+
+    </script>
+</body>
+</html>
+
+localStorage.remove item
